@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-function Counter() {
+function Counter({ data }) {
 	const [count, setCount] = useState(0);
 	const renderCount = useRef(0);
 	return (
@@ -12,4 +12,9 @@ function Counter() {
 	);
 }
 
-export default React.memo(Counter);
+export default React.memo(Counter, (previousProps, currentProps) => {
+	if (previousProps.data.fromParent === currentProps.data.fromParent) {
+		return true;
+	}
+	return false;
+});

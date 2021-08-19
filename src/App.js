@@ -5,6 +5,10 @@ import Counter from './Counter';
 function App() {
 	const [text, settext] = useState('');
 	const rerenderCount = useRef(0);
+	const data = {
+		fromParent: 'hello',
+	};
+
 	return (
 		<div className='App'>
 			<div>App Renders: {rerenderCount.current++}</div>
@@ -14,7 +18,7 @@ function App() {
 				onChange={(e) => settext(e.target.value)}
 			></input>
 
-			<Counter></Counter>
+			<Counter data={data}></Counter>
 		</div>
 	);
 }
