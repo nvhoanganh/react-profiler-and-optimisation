@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import './App.css';
 import Counter from './Counter';
 
@@ -6,6 +6,9 @@ function App() {
 	const [text, settext] = useState('');
 	const [text2, settext2] = useState('');
 	const rerenderCount = useRef(0);
+
+	const clearTextBox = useCallback(() => settext(''), [settext]);
+
 	const data = useMemo(
 		() => ({
 			fromParent: 'hello',
@@ -28,7 +31,7 @@ function App() {
 				onChange={(e) => settext2(e.target.value)}
 			></input>
 
-			<Counter data={data}></Counter>
+			<Counter data={data} clearTextBox={clearTextBox}></Counter>
 		</div>
 	);
 }
