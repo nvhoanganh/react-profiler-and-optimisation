@@ -1,6 +1,7 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import './App.css';
 import Counter from './Counter';
+import LongList from './LongList';
 
 function App() {
 	const [text, settext] = useState('');
@@ -32,6 +33,7 @@ function App() {
 			></input>
 
 			<Counter data={data} clearTextBox={clearTextBox}></Counter>
+			<LongList data={data} />
 		</div>
 	);
 }
