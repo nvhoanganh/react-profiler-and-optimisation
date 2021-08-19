@@ -12,9 +12,4 @@ function Counter({ data }) {
 	);
 }
 
-export default React.memo(Counter, (previousProps, currentProps) => {
-	if (previousProps.data.fromParent === currentProps.data.fromParent) {
-		return true;
-	}
-	return false;
-});
+export default React.memo(Counter);
