@@ -33,7 +33,6 @@ function App() {
 			></input>
 
 			<Counter data={data} clearTextBox={clearTextBox}></Counter>
-			<LongList data={data} />
 		</div>
 	);
 }
