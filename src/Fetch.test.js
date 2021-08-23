@@ -29,7 +29,9 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-test('initial state should show Loading...', async () => {
+test('initial state should show Loading... then show the text', async () => {
 	render(<Fetch />);
-	await waitFor(() => screen.getByText('loading...'));
+	expect(screen.getByText('loading...')).toBeVisible();
+	// await waitFor(() => screen.getByText('test 1 : available'))
+	await screen.findByText('test 1 : available');
 });
