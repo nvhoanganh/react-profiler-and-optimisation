@@ -1,3 +1,13 @@
+
+# Reat testing - Agenda
+- testing stateless function (utilities)
+- testing custom React Hook 
+- testing simple React component with useState and useEffect hooks
+- testing simple React component with Fetch using Mock Service Worker - calling API on mount 
+- testing simple React component with Fetch using Mock Service Worker - calling API on click event
+- testing simple React component with Global State (Recoil)
+- e2e testing React App using Playwright
+
 # add e2e tests to react app
 
 - use CodeGen feature and have the test written for you
