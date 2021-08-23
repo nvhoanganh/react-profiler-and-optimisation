@@ -1,4 +1,6 @@
 import { getTotalAvalable, add } from './api.service';
+import fetchMock from "jest-fetch-mock";
+fetchMock.enableMocks();
 
 beforeEach(() => {
 	fetch.resetMocks();
