@@ -2,6 +2,7 @@ import React, { useCallback, useMemo, useRef, useState } from 'react';
 import './App.css';
 import Counter from './Counter';
 import Fetch from './Fetch';
+import Fetch2 from './Fetch2';
 import LongList from './LongList';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
 			></input>
 
 			<Counter data={data} clearTextBox={clearTextBox}></Counter>
+			<Fetch2></Fetch2>
 			<Fetch></Fetch>
 		</div>
 	);

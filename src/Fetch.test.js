@@ -32,6 +32,6 @@ afterAll(() => server.close());
 test('initial state should show Loading... then show the text', async () => {
 	render(<Fetch />);
 	expect(screen.getByText('loading...')).toBeVisible();
-	// await waitFor(() => screen.getByText('test 1 : available'))
+	
 	await screen.findByText('test 1 : available');
 });
