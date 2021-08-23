@@ -16,7 +16,9 @@ function Fetch() {
 	return (
 		<div>
 			{(pets || []).map((x) => (
-				<div key={x.id}>{x.name} : {x.status}</div>
+				<div key={x.id}>
+					{x.name} : {x.status}
+				</div>
 			))}
 		</div>
 	);
