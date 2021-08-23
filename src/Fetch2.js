@@ -19,7 +19,9 @@ function Fetch() {
 			) : (
 				<div>Click load button</div>
 			)}
-			<button data-testid="fetchbutton" onClick={fetchInvetory}>Fetch Inventory</button>
+			<button data-testid='fetchbutton' onClick={fetchInvetory}>
+				Fetch Inventory
+			</button>
 		</>
 	);
 }
