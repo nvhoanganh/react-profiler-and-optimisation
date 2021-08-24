@@ -11,4 +11,5 @@
 
 
 # Resources
+- this repo: https://github.com/nvhoanganh/react-profiler-and-optimisation
 - api: https://petstore.swagger.io
