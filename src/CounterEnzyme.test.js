@@ -7,8 +7,8 @@ describe('Our test suite', () => {
 	// https://github.com/cheeriojs/cheerio
 	it('using render()', () => {
 		const wrapper = render(<Counter data='hello' />);
-		console.log('render()', wrapper.html());
-		expect(wrapper.find('div:contains("count: 0")')).toBeDefined();
+		// console.log('render()', wrapper.html());
+		expect(wrapper.find('div:contains("count: 0")').length).toBe(1);
 		// you can't do this:
 		// expect(wrapper.contains(<div>count: 0</div>)).toBeTruthy();
 	});
@@ -16,7 +16,7 @@ describe('Our test suite', () => {
 	// mount, work with full DOM rendering includes all the child elements (if each compoennt intereacts with each other
 	it('using mount()', () => {
 		const wrapper = mount(<Counter data='hello' />);
-		console.log('mount()', wrapper.html());
+		// console.log('mount()', wrapper.html());
 
 		expect(wrapper.find(ChildElement)).toBeTruthy();
 		expect(wrapper.contains(<div>count: 0</div>)).toBeTruthy();
@@ -29,7 +29,7 @@ describe('Our test suite', () => {
 	it('using shallow()', () => {
 		const wrapper = shallow(<Counter data='hello' />);
 
-		console.log('shallow()', wrapper.html());
+		// console.log('shallow()', wrapper.html());
 
 		expect(wrapper.find(ChildElement)).toBeTruthy();
 		expect(wrapper.find(ChildElement).prop('data')).toBe('hello');

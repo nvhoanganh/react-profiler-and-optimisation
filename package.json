@@ -18,14 +18,14 @@
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
-		"start": "BROWSER=NONE react-scripts start",
+		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"test:e2e": "playwright test -c e2e",
 		"test:e2e:debug": "PWDEBUG=1 playwright test",
 		"test:e2e:ci": "concurrently --kill-others --success first \"npm run start\" \"sleep 5 && npm run test:e2e\"",
-		"test:e2e:ci:updatesnapshot": "concurrently --kill-others --success first \"npm run start\" \"sleep 5 && npm run test:e2e -- --update-snapshots\"",
+		"test:e2e:ci:updatesnapshot": "concurrently --kill-others --success first \"BROWSER=NONE react-scripts start\" \"sleep 5 && npm run test:e2e -- --update-snapshots\"",
 		"test:e2e:headed": "playwright test --headed"
 	},
 	"eslintConfig": {
