@@ -1,0 +1,5 @@
+###
+GET https://petstore.swagger.io/v2/pet/findByStatus?status=available
+
+###
+GET https://petstore.swagger.io/v2/store/inventory

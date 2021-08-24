@@ -1,39 +1,54 @@
 {
-  "name": "react-performance-optimisation",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "react-window": "^1.8.6",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "react-performance-optimisation",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.11.4",
+		"@testing-library/react-hooks": "^7.0.1",
+		"@testing-library/user-event": "^12.1.10",
+		"@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+		"enzyme": "^3.11.0",
+		"jest-fetch-mock": "^3.0.3",
+		"msw": "^0.35.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"react-scripts": "4.0.3",
+		"react-window": "^1.8.6",
+		"recoil": "^0.4.0",
+		"web-vitals": "^1.0.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"test:e2e": "playwright test -c e2e",
+		"test:e2e:debug": "PWDEBUG=1 playwright test",
+		"test:e2e:ci": "concurrently --kill-others --success first \"npm run start\" \"sleep 5 && npm run test:e2e\"",
+		"test:e2e:ci:updatesnapshot": "concurrently --kill-others --success first \"BROWSER=NONE react-scripts start\" \"sleep 5 && npm run test:e2e -- --update-snapshots\"",
+		"test:e2e:headed": "playwright test --headed"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.14.0",
+		"@testing-library/react": "^11.2.7",
+		"concurrently": "^6.2.1"
+	}
 }

@@ -18,8 +18,12 @@ function Counter({ data, clearTextBox }) {
 			>
 				Increment
 			</button>
+			<ChildElement data={data}></ChildElement>
 		</div>
 	);
 }
 
+export function ChildElement({ data }) {
+	return <h1>This is child</h1>;
+}
 export default React.memo(Counter);

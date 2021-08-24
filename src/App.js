@@ -1,7 +1,12 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import './App.css';
-import Counter from './Counter';
+import mnter from './Counter';
+import Fetch from './Fetch';
+import Fetch2 from './Fetch2';
 import LongList from './LongList';
+import { RecoilRoot } from 'recoil';
+import CounterRecoil from './CounterRecoil';
+import Counter from './Counter';
 
 function App() {
 	const [text, settext] = useState('');
@@ -19,22 +24,26 @@ function App() {
 	);
 
 	return (
-		<div className='App'>
-			<div>App Renders: {rerenderCount.current++}</div>
-			<input
-				placeholder='text1'
-				value={text}
-				onChange={(e) => settext(e.target.value)}
-			></input>
-			<input
-				placeholder='text2'
-				value={text2}
-				onChange={(e) => settext2(e.target.value)}
-			></input>
+		<RecoilRoot>
+			<div className='App'>
+				<div>App Renders: {rerenderCount.current++}</div>
+				<input
+					placeholder='text1'
+					value={text}
+					onChange={(e) => settext(e.target.value)}
+				></input>
+				<input
+					placeholder='text2'
+					value={text2}
+					onChange={(e) => settext2(e.target.value)}
+				></input>
 
-			<Counter data={data} clearTextBox={clearTextBox}></Counter>
-			<LongList data={data} />
-		</div>
+				<Counter data={data} clearTextBox={clearTextBox}></Counter>
+				<CounterRecoil></CounterRecoil>
+				<Fetch2></Fetch2>
+				<Fetch></Fetch>
+			</div>
+		</RecoilRoot>
 	);
 }
 
