@@ -9,7 +9,6 @@
 - testing simple React component with Global State (Recoil) ✅
 - e2e testing React App using Playwright: https://medium.com/uk-hydrographic-office/why-we-chose-playwright-over-cypress-db4770cf5204 ✅
 
-
 # Resources
 - this repo: https://github.com/nvhoanganh/react-profiler-and-optimisation
 - api: https://petstore.swagger.io
