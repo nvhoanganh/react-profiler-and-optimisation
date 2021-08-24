@@ -1,5 +1,4 @@
-# Reat testing - Agenda
-
+# Reat testing
 - options with React testing : https://medium.com/wesionary-team/react-testing-library-vs-enzyme-afd29db380ac
 - testing stateless function (utilities) ✅
 - testing custom React Hook ✅
@@ -12,3 +11,7 @@
 # Resources
 - this repo: https://github.com/nvhoanganh/react-profiler-and-optimisation
 - api: https://petstore.swagger.io
+
+# run tests on this repo
+- run `npm test` then press `a` to run all unit tests
+- run `npm run test:e2e:ci:updatesnapshot` to run e2e tests   
