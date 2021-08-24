@@ -1,11 +1,12 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import './App.css';
-import Counter from './Counter';
+import mnter from './Counter';
 import Fetch from './Fetch';
 import Fetch2 from './Fetch2';
 import LongList from './LongList';
 import { RecoilRoot } from 'recoil';
 import CounterRecoil from './CounterRecoil';
+import Counter from './Counter';
 
 function App() {
 	const [text, settext] = useState('');

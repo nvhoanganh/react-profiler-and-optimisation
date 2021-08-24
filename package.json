@@ -13,17 +13,18 @@
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-scripts": "4.0.3",
+		"react-window": "^1.8.6",
 		"recoil": "^0.4.0",
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
-		"start": "react-scripts start",
+		"start": "BROWSER=NONE react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"test:e2e": "playwright test -c e2e",
 		"test:e2e:debug": "PWDEBUG=1 playwright test",
-		"test:e2e:ci": "concurrently --kill-others \"npm run start\" \"sleep 5 && npm run test:e2e\"",
+		"test:e2e:ci": "concurrently --kill-others --success first \"npm run start\" \"sleep 5 && npm run test:e2e\"",
 		"test:e2e:ci:updatesnapshot": "concurrently --kill-others --success first \"npm run start\" \"sleep 5 && npm run test:e2e -- --update-snapshots\"",
 		"test:e2e:headed": "playwright test --headed"
 	},
